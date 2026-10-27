@@ -1,0 +1,22 @@
+# Environment files and local credentials
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Logs and local runtime output
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGROSSAM - Gestión Multisucursal</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-dashboard" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></symbol>
+    <symbol id="icon-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20v-1.5a6.5 6.5 0 0 1 13 0V20z"/><path d="M16 5a3.5 3.5 0 0 1 0 6.8M18 14a5.5 5.5 0 0 1 3.5 5.2V20h-4"/></symbol>
+    <symbol id="icon-building" viewBox="0 0 24 24"><path d="M4 21V5l8-3v19M12 8h8v13M2 21h20"/><path d="M7 7h2M7 11h2M7 15h2M15 11h2M15 15h2"/></symbol>
+    <symbol id="icon-package" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7z"/><path d="m3.5 7.5 8.5 5 8.5-5M12 22V12.5M7.5 4.5l9 5"/></symbol>
+    <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="icon-receipt" viewBox="0 0 24 24"><path d="M5 3h14v18l-3-2-4 2-4-2-3 2z"/><path d="M8 8h8M8 12h8M8 16h4"/></symbol>
+    <symbol id="icon-report" viewBox="0 0 24 24"><path d="M7 3h10l4 4v14H7zM17 3v5h4M10 12h8M10 16h8M10 8h2"/></symbol>
+    <symbol id="icon-logout" viewBox="0 0 24 24"><path d="M10 17l5-5-5-5M15 12H3"/><path d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="7"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="icon-alert" viewBox="0 0 24 24"><path d="m10.3 4.3-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-2.7l-8-14a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+    <symbol id="icon-edit" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="m16.5 3.5 4 4L8 20l-5 1 1-5z"/></symbol>
+    <symbol id="icon-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M19 6l-1 15H6L5 6M10 11v6M14 11v6"/></symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6 3h4l2 5-3 2a15 15 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.5 9A7 7 0 0 1 18 6l2 2M4 16l2 2a7 7 0 0 0 12.5-3"/></symbol>
+    <symbol id="icon-tag" viewBox="0 0 24 24"><path d="M20.6 13.4 13 21l-10-10V3h8z"/><circle cx="7.5" cy="7.5" r="1"/></symbol>
+    <symbol id="icon-warehouse" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v11H3zM9 21v-7h6v7M7 11h.01M12 11h.01M17 11h.01"/></symbol>
+    <symbol id="icon-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M4 7l-3 6h6zM20 7l-3 6h6zM7 21h10"/></symbol>
+    <symbol id="icon-down" viewBox="0 0 24 24"><path d="M12 3v18M5 14l7 7 7-7"/></symbol>
+    <symbol id="icon-up" viewBox="0 0 24 24"><path d="M12 21V3M5 10l7-7 7 7"/></symbol>
+    <symbol id="icon-location" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="icon-wallet" viewBox="0 0 24 24"><path d="M4 6h15a2 2 0 0 1 2 2v12H4a2 2 0 0 1-2-2V6a3 3 0 0 1 3-3h14v3"/><path d="M21 11h-5a2 2 0 0 0 0 4h5z"/><path d="M16 13h.01"/></symbol>
+    <symbol id="icon-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
+    <symbol id="icon-mobile" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24"><path d="M6 3h9l5 5v13H6zM15 3v6h5M9 13h8M9 17h8"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+    <symbol id="icon-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-printer" viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6zM18 12h.01"/></symbol>
+    <symbol id="icon-repeat" viewBox="0 0 24 24"><path d="m17 1 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></symbol>
+    <symbol id="icon-delivery" viewBox="0 0 24 24"><path d="M3 5h12v13H3zM15 9h4l3 4v5h-7"/><circle cx="7.5" cy="19" r="2"/><circle cx="18.5" cy="19" r="2"/></symbol>
+    <symbol id="icon-file-plus" viewBox="0 0 24 24"><path d="M6 3h9l5 5v6M15 3v6h5M6 3v18h8"/><path d="M19 16v6M16 19h6"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  </svg>
+  <div id="app">
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-container">
+      <div class="login-box">
+        <div class="login-header">
+          <div class="logo">AG</div>
+          <h1>AGROSSAM</h1>
+          <p>Gestión multisucursal</p>
+        </div>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" required placeholder="admin@agrossam.com" value="admin@agrossam.com">
+          </div>
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" required placeholder="••••••••" value="admin123">
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Iniciar Sesión</button>
+          <div id="login-error" class="error-message"></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Main App Layout -->
+    <div id="main-layout" class="app-layout" style="display:none;">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">AG</div>
+          <div class="brand">
+            <h2>AGROSSAM</h2>
+            <p>Gestión multisucursal</p>
+          </div>
+        </div>
+
+        <div class="sidebar-user">
+          <span class="user-avatar" id="sidebar-avatar">A</span>
+          <div class="user-info">
+            <span id="sidebar-username">Usuario</span>
+            <span id="sidebar-branch" class="text-muted">Sucursal</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">
+            <span class="nav-section-title">PRINCIPAL</span>
+            <a href="#/dashboard" class="nav-item" data-page="dashboard">
+              <svg class="nav-icon" aria-hidden="true"><use href="#icon-dashboard"></use></svg>
+              <span>Dashboard</span>
+            </a>
+            <a href="#/pos" class="nav-item" data-page="pos">
+              <svg class="nav-icon" aria-hidden="true"><use href="#icon-cart"></use></svg>
+              <span>Punto de Venta</span>
+            </a>
+          </div>
+
+          <div class="nav-section" id="admin-section">
+            <span class="nav-section-title">ADMINISTRACIÓN</span>
+            <a href="#/users" class="nav-item" data-page="users">
+              <svg class="nav-icon" aria-hidden="true"><use href="#icon-users"></use></svg>
+              <span>Usuarios y Permisos</span>
+            </a>
+            <a href="#/branches" class="nav-item" data-page="branches">
+              <svg class="nav-icon" aria-hidden="true"><use href="#icon-building"></use></svg>
+              <span>Sucursales</span>
+            </a>
+          </div>
+
+          <div class="nav-section">
+            <span class="nav-section-title">INVENTARIO</span>
+            <a href="#/inventory" class="nav-item" data-page="inventory">
+              <svg class="nav-icon" aria-hidden="true"><use href="#icon-package"></use></svg>
+              <span>Inventario</span>
+            </a>
+          </div>
+
+          <div class="nav-section">
+            <span class="nav-section-title">COMERCIAL</span>
+            <a href="#/contacts" class="nav-item" data-page="contacts">
+              <svg class="nav-icon" aria-hidden="true"><use href="#icon-user"></use></svg>
+              <span>Contactos</span>
+            </a>
+          </div>
+
+          <div class="nav-section">
+            <span class="nav-section-title">COMPRAS Y VENTAS</span>
+            <a href="#/sales" class="nav-item" data-page="sales">
+              <svg class="nav-icon" aria-hidden="true"><use href="#icon-receipt"></use></svg>
+              <span>Facturación y Notas</span>
+            </a>
+            <a href="#/purchases" class="nav-item" data-page="purchases">
+              <svg class="nav-icon" aria-hidden="true"><use href="#icon-package"></use></svg>
+              <span>Compras a Proveedores</span>
+            </a>
+          </div>
+
+          <div class="nav-section">
+            <span class="nav-section-title">FINANZAS</span>
+          </div>
+
+          <div class="nav-section">
+            <span class="nav-section-title">REPORTES</span>
+            <a href="#/reports" class="nav-item" data-page="reports">
+              <svg class="nav-icon" aria-hidden="true"><use href="#icon-report"></use></svg>
+              <span>Reportes</span>
+            </a>
+          </div>
+        </nav>
+
+        <div class="sidebar-footer">
+          <button id="btn-logout" class="nav-item logout-btn">
+            <svg class="nav-icon" aria-hidden="true"><use href="#icon-logout"></use></svg>
+            <span>Cerrar Sesión</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Top Bar -->
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="btn-icon" id="btn-toggle-sidebar" aria-label="Abrir o cerrar menú"><svg class="ui-icon" aria-hidden="true"><use href="#icon-menu"></use></svg></button>
+            <div class="topbar-title">
+              <span id="topbar-branch">Sucursal</span>
+              <span class="separator">·</span>
+              <span id="topbar-page">Dashboard</span>
+            </div>
+            <div class="topbar-date" id="topbar-date"></div>
+          </div>
+          <div class="topbar-right">
+            <div class="search-box">
+              <span class="search-icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-search"></use></svg></span>
+              <input type="text" placeholder="Búsqueda global... (Ctrl+I)" id="global-search">
+            </div>
+            <div class="user-menu">
+              <div class="user-avatar" id="topbar-avatar">A</div>
+              <div class="user-dropdown-info">
+                <span id="topbar-username">Usuario</span>
+                <span class="text-muted" id="topbar-role">Rol</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Page Content -->
+        <div id="page-content" class="page-content">
+          <!-- Las páginas se cargan dinámicamente aquí -->
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
